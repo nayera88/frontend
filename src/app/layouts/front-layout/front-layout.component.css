@@ -1,0 +1,41 @@
+
+ body{
+    margin: 0;
+    background-color: #16c0c0;
+    background-image: url(https://img.freepik.com/premium-vector/city-bus-with-big-city-background-city-bus_285336-900.jpg?w=2000);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.btn{
+    background-color:  #00503D;
+}
+.image{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('ttps://img.freepik.com/premium-vector/city-bus-with-big-city-background-city-bus_285336-900.jpg?w=2000');
+    background-position:50% 50%;
+  }
+
+.high{
+    background-color: #ab21ff;
+}
+.medium{
+    background-color: #36CEAA;
+}
+.low{
+    background-color: #EB6418;
+}
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .form{
+    background-color: aliceblue;
+    font-size: large;
+    width: 20%;
+    height: 40%;
+  }
+ 

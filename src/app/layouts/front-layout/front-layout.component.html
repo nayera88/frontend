@@ -1,0 +1,68 @@
+<div class="links-container">
+  <h1 class="text-center mt-5 ">Trip booking system</h1>
+  <form action="/action_page.php" class="form">
+      <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="username" class="col-form-label">Username</label>
+              <input [(ngModel)]="user.userName" name="userName" type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Password</label>
+              <input [(ngModel)]="user.password"  name="password"  type="text"class="form-control" id="password" placeholder="Password">
+            </div>
+            <div >
+              <ul class="nav">
+                  <li class="nav-item"> 
+                  <a class="nav-link active" routerLink="/admin"><button (click)="login()" type="button" class="btn btn-primary form-control m-1" >Login</button>
+                  </a>
+              </ul>
+            </div>
+          </form>
+        </div>
+       
+
+          <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Create new account</button>
+          </div>
+          <div class="modal fade cente" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">Sign up</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="userName" class="col-form-label">Username</label>
+                      <input [(ngModel)]="user.userName" name="userName" type="text" class="form-control" id="userName" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-form-label">Email</label>
+                      <input [(ngModel)]="user.email" name="email" type="text"class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone" class="col-form-label">Mobile Number</label>
+                      <input [(ngModel)]="user.phone" name="phone" type="text"class="form-control" id="phone" placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="col-form-label">Password</label>
+                      <input [(ngModel)]="user.password" name="password"  type="text"class="form-control" id="password" placeholder="Password">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button (click)="create()" type="button" class="btn btn-primary" data-dismiss="modal">Sign up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+     
+  </form>
+</div>
+  <router-outlet></router-outlet>

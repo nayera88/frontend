@@ -1,0 +1,30 @@
+
+<div class="container" >
+    <h1 class="text-center ">stations</h1>
+    
+    <div class="row ">
+      
+        <div class="col-2">
+            <button (click)="create()" class="btn form-control m-1 text-light" >Show All Stations</button><br><br>
+        </div>
+    </div>
+    
+    
+    
+    <div class="row mt-1">
+    
+    <div class="col-2" *ngFor="let item of stations">
+        
+            <div class="card medium" style="width: 10rem; height:8rem;" >
+                <h5> Station Name: </h5>
+                <p>{{item.name}}</p>
+                <h5> Station id: </h5>
+                <P>{{item.id}}</P>
+                
+                
+            </div>
+        
+    </div>
+    
+    </div>
+    </div> 

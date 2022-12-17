@@ -1,0 +1,100 @@
+
+<div class="container">
+    <h1 class="text-center ">Trips</h1>
+    
+    <div class="row ">
+        <div class="col-2 ">
+            <input [(ngModel)]="trip.startTime"name="startTime"  type="text" class="form-control m-1" placeholder="Start Time">
+        </div>
+        <div class="col-2">
+            <input [(ngModel)]="trip.endTime" name="endtTime" type="text" class="form-control m-1" placeholder="End Time">
+        </div>
+        <div class="col-2">
+            <input [(ngModel)]="trip.toStation" name="fromStation"type="text" class="form-control m-1" placeholder="Source">
+        </div>
+        <div class="col-2">
+            <input [(ngModel)]="trip.fromStation" name="toStation"type="text" class="form-control m-1" placeholder="Destination">
+        </div>
+        <div class="col-2">
+            <button (click)="createTrip()" class="btn form-control m-1 text-light" >Create Trip</button><br><br>
+        </div>
+    </div>
+       
+        <div class=" container">
+            <form class="row">
+            <div class="col-5">
+            <b><label for="id" class="col-form-label">Update Trip By id</label></b>
+            <input  [(ngModel)]="trip.Id" name="Id" type="text" class="form-control m-1" placeholder="Trip id">
+            <button (click)="getTripById(trip.Id,trip)"type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Update trip</button>
+        </div>
+        <div class="col-5 ">
+            <b><label for="id" class="col-form-label">Delete Trip By id</label></b>
+            <input  [(ngModel)]="trip.Id"name="Id" type="text" class="form-control m-1" placeholder="Trip id">
+            <button (click)="deleteTrip(trip.Id)"type="button" class="btn btn-primary"  >Delete trip</button>
+        </div>
+            </form>
+            </div>
+            <div class="modal fade cente" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Trip Update</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="stime" class="col-form-label">Start Time</label>
+                        <input [(ngModel)]="trip.startTime" name="startTime"type="text" class="form-control" id="stime" placeholder="Start Time">
+                      </div>
+                      <div class="form-group">
+                        <label for="etime" class="col-form-label">End Time</label>
+                        <input [(ngModel)]="trip.endTime" name="endTime"type="text"class="form-control" id="etime" placeholder="End Time">
+                      </div>
+                      <div class="form-group">
+                        <label for="source" class="col-form-label">Source</label>
+                        <input [(ngModel)]="trip.fromStation" name="fromStation"type="text"class="form-control" id="source" placeholder="Source">
+                      </div>
+                      <div class="form-group">
+                        <label for="des" class="col-form-label">Destination</label>
+                        <input [(ngModel)]="trip.toStation" name="toStation"type="text"class="form-control" id="des" placeholder="Destination">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button (click)="update(trip.Id,trip)" type="button" class="btn btn-primary" data-dismiss="modal">Update Trip</button>
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+                  <div class=" container row mt-1 ">
+                    <button (click)="getTrips()" type="button" class="btn btn-primary" data-dismiss="modal">Show All Trips</button>
+                    <div class="col-2" *ngFor="let item of trips">
+                        
+                            <div class="card medium" style="width: 10rem; height:21rem;" >
+                              <h5> Trip id: </h5>
+                                <P>{{item.Id}}</P>
+                                <h5> Start Time: </h5>
+                                <p>{{item.startTime}}</p>
+                                <h5> End Time: </h5>
+                                <P>{{item.endTime}}</P>
+                                <h5> From : </h5>
+                                <P>{{item.fromStation}}</P>
+                                <h5> To: </h5>
+                                <P>{{item.toStation}}</P>
+                        
+                        
+                    </div>
+                </div>
+           
+
+  
+
+    
+    
+ 
